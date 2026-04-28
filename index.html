@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Никита ✧ Анастасия | Свадебное приглашение</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Special+Elite&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -13,8 +13,10 @@
     }
 
     body {
-      background: linear-gradient(135deg, #eef0e5 0%, #e2e4d6 100%);
-      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-style: italic;
       min-height: 100vh;
       overflow-x: hidden;
     }
@@ -54,15 +56,7 @@
     }
 
     .envelope::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: repeating-linear-gradient(45deg, rgba(90, 75, 40, 0.08) 0px, rgba(90, 75, 40, 0.08) 2px, transparent 2px, transparent 8px);
-      pointer-events: none;
-      border-radius: 10px;
+      display: none;
     }
 
     .envelope:hover {
@@ -189,38 +183,24 @@
     .container {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 2rem 2rem 6rem;
+      padding: 1rem 1rem 4rem;
       position: relative;
       z-index: 2;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: radial-gradient(circle at 20% 35%, rgba(110, 95, 65, 0.05) 2%, transparent 2.5%),
-                        radial-gradient(circle at 75% 80%, rgba(85, 75, 50, 0.04) 1.5%, transparent 2%);
-      background-size: 55px 55px, 70px 70px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
     .hero {
       text-align: center;
-      padding: 1rem 1rem 1rem;
+      padding: 0.5rem 0.5rem 0.5rem;
       position: relative;
     }
 
     .couple-photo {
       width: 85%;
       max-width: 550px;
-      margin: 1.5rem auto;
+      margin: 1rem auto;
       border-radius: 24px;
       overflow: hidden;
-      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.25);
+      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.15);
       border: 3px solid #abb07c;
       transition: transform 0.3s ease;
     }
@@ -237,36 +217,39 @@
     }
 
     .names-first {
-      margin: 0.5rem 0 0.5rem;
+      margin: 0.2rem 0 0.2rem;
     }
 
     .names-modern {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 3rem;
-      font-weight: 600;
-      color: #545235;
+      font-size: 2.2rem;
+      font-weight: 700;
+      font-style: italic;
+      color: #3a4a2a;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
+      gap: 0.5rem;
+      flex-wrap: nowrap;
     }
 
     .names-modern span {
       background: rgba(100, 90, 60, 0.08);
-      padding: 0.2rem 1.3rem;
+      padding: 0.2rem 1rem;
       border-radius: 50px;
       backdrop-filter: blur(2px);
+      white-space: nowrap;
     }
 
     .heart-icon {
       display: inline-block;
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       color: #e34234;
       animation: heartbeat 1.6s ease-in-out infinite;
       filter: drop-shadow(0 4px 10px rgba(200, 60, 50, 0.3));
       transform-origin: center;
       line-height: 1;
+      font-style: normal;
     }
 
     @keyframes heartbeat {
@@ -277,21 +260,22 @@
 
     .greeting-text {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: #5a553b;
+      font-size: 1.4rem;
+      font-weight: 700;
+      font-style: italic;
+      line-height: 1.7;
+      color: #2a3a1a;
       background: rgba(245, 242, 230, 0.7);
       padding: 1.5rem;
       border-radius: 2rem;
       margin: 1rem auto 1.5rem;
       max-width: 600px;
-      font-style: italic;
     }
 
     .calendar-wrapper {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 1rem;
       flex-wrap: wrap;
       margin: 1rem 0;
     }
@@ -302,8 +286,8 @@
       align-items: center;
       background: #fef7e0;
       border-radius: 16px;
-      padding: 0.5rem 1.2rem;
-      min-width: 90px;
+      padding: 0.5rem 1rem;
+      min-width: 75px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       border: 1px solid #e0d5a8;
       transition: all 0.2s ease;
@@ -327,40 +311,43 @@
     }
 
     .calendar-month {
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       text-transform: uppercase;
       letter-spacing: 1px;
       color: #9e8e5a;
       font-weight: 600;
+      font-style: normal;
     }
 
     .calendar-day {
-      font-size: 2rem;
+      font-size: 1.6rem;
       font-weight: 700;
       font-family: 'Playfair Display', serif;
       color: #7b6b3a;
       line-height: 1;
+      font-style: normal;
     }
 
     .calendar-year {
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       color: #b0a26a;
+      font-style: normal;
     }
 
     .countdown-grid {
       display: flex;
       justify-content: center;
-      gap: 1.6rem;
+      gap: 1rem;
       flex-wrap: wrap;
-      margin: 2rem 0 2rem;
+      margin: 1.5rem 0 1.5rem;
     }
 
     .cd-card {
       background: rgba(245, 242, 230, 0.85);
       backdrop-filter: blur(10px);
-      border-radius: 1.8rem;
-      padding: 1.2rem 1.2rem;
-      min-width: 85px;
+      border-radius: 1.5rem;
+      padding: 0.8rem 0.8rem;
+      min-width: 70px;
       text-align: center;
       box-shadow: 0 12px 28px -10px rgba(60, 55, 35, 0.15);
       border: 1px solid #dbd4b5;
@@ -374,28 +361,30 @@
     }
 
     .cd-number {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 700;
       font-family: 'Playfair Display', serif;
       color: #5e6240;
       line-height: 1.1;
+      font-style: normal;
     }
 
     .cd-label {
-      font-size: 0.7rem;
+      font-size: 0.6rem;
       text-transform: uppercase;
       letter-spacing: 2px;
-      font-weight: 500;
+      font-weight: 600;
       color: #7b7351;
-      margin-top: 0.5rem;
+      margin-top: 0.3rem;
+      font-style: normal;
     }
 
     .glass-card {
       background: rgba(248, 245, 235, 0.88);
       backdrop-filter: blur(10px);
-      border-radius: 2.2rem;
-      padding: 2rem 2rem;
-      margin: 2rem 0;
+      border-radius: 2rem;
+      padding: 1.5rem 1.2rem;
+      margin: 1.5rem 0;
       box-shadow: 0 20px 35px -15px rgba(65, 60, 40, 0.12), 0 0 0 1px rgba(170, 155, 115, 0.25);
       transition: transform 0.4s cubic-bezier(0.2,0.9,0.4,1.1), opacity 0.7s ease;
       opacity: 0;
@@ -408,15 +397,26 @@
     }
 
     .glass-card h2 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Cormorant Garamond', serif;
       font-size: 1.8rem;
-      font-weight: 600;
+      font-weight: 700;
+      font-style: italic;
       letter-spacing: -0.2px;
       color: #5a5b3e;
       text-align: center;
       border-left: none;
       padding-left: 0;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .dresscode-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      font-style: italic;
+      color: #5a5b3e;
+      text-align: center;
+      margin: 1rem 0 0.8rem 0;
     }
 
     .timeline {
@@ -439,40 +439,47 @@
 
     .timeline-time {
       font-weight: 700;
-      color: #7e744b;
-      min-width: 100px;
-      font-size: 1.1rem;
+      font-style: italic;
+      color: #5a4a2a;
+      min-width: 85px;
+      font-size: 1.2rem;
+      font-family: 'Cormorant Garamond', serif;
     }
 
     .timeline-event {
-      color: #464832;
-      font-size: 1rem;
+      color: #3a4a2a;
+      font-size: 1.2rem;
+      font-weight: 700;
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
     }
 
     .dresscode-text {
+      font-family: 'Cormorant Garamond', serif;
       text-align: center;
-      font-size: 1.2rem;
-      color: #5a553b;
-      padding: 1rem;
+      font-size: 1.3rem;
+      font-weight: 700;
       font-style: italic;
+      line-height: 1.6;
+      color: #2a3a1a;
+      padding: 1rem;
       background: rgba(215, 208, 175, 0.2);
       border-radius: 1.5rem;
-      max-width: 500px;
-      margin: 0 auto;
+      max-width: 550px;
+      margin: 0 auto 1rem auto;
     }
 
-    /* СТИЛИ ДЛЯ ЦВЕТОВЫХ КРУЖКОВ - 4 ШТУКИ */
     .dresscode-colors {
       display: flex;
       justify-content: center;
       gap: 15px;
       flex-wrap: wrap;
-      margin-top: 25px;
+      margin: 15px 0;
       padding: 0;
     }
     .dresscode-colors li {
-      width: 50px;
-      height: 50px;
+      width: 45px;
+      height: 45px;
       border-radius: 50%;
       list-style: none;
       transition: transform 0.2s ease;
@@ -486,6 +493,29 @@
     .dresscode-colors li:nth-child(3) { background: #8fa271; }
     .dresscode-colors li:nth-child(4) { background: #abb07c; }
 
+    .dresscode-colors-men {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin: 15px 0;
+      padding: 0;
+    }
+    .dresscode-colors-men li {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      list-style: none;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+      border: 1px solid #ccc;
+    }
+    .dresscode-colors-men li:hover {
+      transform: scale(1.1);
+    }
+    .dresscode-colors-men li:nth-child(1) { background: #ffffff; }
+    .dresscode-colors-men li:nth-child(2) { background: #1a1a1a; }
+
     .map-wrapper {
       border-radius: 1.8rem;
       overflow: hidden;
@@ -496,31 +526,32 @@
 
     .map-wrapper iframe {
       width: 100%;
-      height: 400px;
+      height: 350px;
       display: block;
     }
 
     .rsvp-section {
       text-align: center;
-      margin: 3rem 0 1rem;
+      margin: 2rem 0 1rem;
     }
 
     .button-group {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1.5rem;
-      margin-top: 1.5rem;
+      gap: 1rem;
+      margin-top: 1.2rem;
     }
 
     .btn-modern {
       background: #7b7a4f;
       color: #fef9e6;
-      padding: 0.8rem 2rem;
+      padding: 0.7rem 1.5rem;
       border-radius: 50px;
       text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
+      font-weight: 600;
+      font-style: italic;
+      font-size: 1rem;
       letter-spacing: 0.3px;
       transition: all 0.25s ease;
       box-shadow: 0 6px 14px rgba(85, 75, 35, 0.25);
@@ -528,6 +559,7 @@
       align-items: center;
       gap: 8px;
       border: 1px solid #dbd19b;
+      font-family: 'Cormorant Garamond', serif;
     }
 
     .btn-modern:hover {
@@ -537,58 +569,54 @@
     }
 
     footer {
-      margin-top: 4rem;
+      margin-top: 3rem;
       text-align: center;
-      font-size: 0.85rem;
+      font-size: 1rem;
+      font-weight: 700;
+      font-style: italic;
       color: #928a62;
       letter-spacing: 0.5px;
       border-top: 1px solid rgba(140, 125, 80, 0.25);
-      padding-top: 2rem;
+      padding-top: 1.5rem;
+      font-family: 'Cormorant Garamond', serif;
     }
 
-    .floral-bg {
-      position: fixed;
-      top: 12%;
-      left: -3%;
-      width: 280px;
-      height: 280px;
-      background: radial-gradient(circle, rgba(155, 145, 85, 0.07) 0%, rgba(0,0,0,0) 70%);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .floral-bg-2 {
-      bottom: 8%;
-      right: -2%;
-      top: auto;
-      left: auto;
-      width: 380px;
-      height: 380px;
-      background: radial-gradient(circle, rgba(125, 115, 65, 0.06) 0%, rgba(0,0,0,0) 70%);
-    }
-
-    @media (max-width: 700px) {
-      .container { padding: 1rem 1.2rem 4rem; }
-      .names-modern { font-size: 2rem; gap: 0.4rem; }
-      .heart-icon { font-size: 1.5rem; }
-      .cd-number { font-size: 1.8rem; }
-      .cd-card { padding: 0.8rem 0.6rem; min-width: 65px; }
-      .glass-card { padding: 1.3rem; }
-      .glass-card h2 { font-size: 1.4rem; }
-      .greeting-text { font-size: 1rem; padding: 1rem; }
-      .timeline-time { min-width: 70px; font-size: 0.9rem; }
-      .timeline-event { font-size: 0.85rem; }
-      .envelope { width: 300px; height: 195px; }
-      .wax-seal { width: 85px; height: 85px; }
-      .seal-text { font-size: 0.7rem; letter-spacing: 2px; padding: 3px 8px; }
-      .seal-icon { font-size: 1.3rem; }
-      .map-wrapper iframe { height: 300px; }
-      .couple-photo { width: 95%; border-radius: 18px; }
-      .calendar-date-item { padding: 0.3rem 0.8rem; min-width: 70px; }
-      .calendar-day { font-size: 1.5rem; }
+    @media (max-width: 550px) {
+      .container { padding: 0.8rem 0.8rem 3rem; }
+      .names-modern { font-size: 1.6rem; gap: 0.3rem; }
+      .names-modern span { padding: 0.15rem 0.7rem; white-space: nowrap; }
+      .heart-icon { font-size: 1.4rem; }
+      .greeting-text { font-size: 1.1rem; padding: 1rem; margin: 0.5rem auto 1rem; }
+      .dresscode-text { font-size: 1.1rem; padding: 0.8rem; }
+      .cd-number { font-size: 1.5rem; }
+      .cd-card { padding: 0.6rem 0.5rem; min-width: 55px; }
+      .cd-label { font-size: 0.55rem; }
+      .glass-card { padding: 1rem 0.8rem; margin: 1rem 0; }
+      .glass-card h2 { font-size: 1.4rem; margin-bottom: 1rem; }
+      .timeline-time { min-width: 70px; font-size: 1rem; }
+      .timeline-event { font-size: 1rem; }
+      .timeline-item { gap: 0.6rem; padding: 0.6rem 0.8rem; }
+      .dresscode-colors li, .dresscode-colors-men li { width: 35px; height: 35px; }
+      .map-wrapper iframe { height: 250px; }
+      .btn-modern { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+      .calendar-date-item { padding: 0.3rem 0.6rem; min-width: 60px; }
+      .calendar-day { font-size: 1.3rem; }
       .calendar-date-item.highlight { transform: scale(1.03); }
+      .dresscode-subtitle { font-size: 1.1rem; }
+      footer { font-size: 0.85rem; }
+    }
+
+    @media (max-width: 400px) {
+      .names-modern { font-size: 1.3rem; gap: 0.2rem; }
+      .names-modern span { padding: 0.1rem 0.5rem; }
+      .heart-icon { font-size: 1.2rem; }
+      .greeting-text { font-size: 1rem; }
       .dresscode-text { font-size: 1rem; }
-      .dresscode-colors li { width: 35px; height: 35px; }
+      .timeline-time { min-width: 60px; font-size: 0.9rem; }
+      .timeline-event { font-size: 0.9rem; }
+      .glass-card h2 { font-size: 1.2rem; }
+      .btn-modern { font-size: 0.85rem; }
+      footer { font-size: 0.75rem; }
     }
   </style>
 </head>
@@ -607,8 +635,6 @@
 
 <!-- ОСНОВНОЕ ПРИГЛАШЕНИЕ -->
 <div class="main-content" id="mainContent">
-  <div class="floral-bg"></div>
-  <div class="floral-bg floral-bg-2"></div>
 
   <div class="container">
     <div class="hero">
@@ -628,7 +654,7 @@
       
       <!-- ТЕКСТ-ОБРАЩЕНИЕ -->
       <div class="greeting-text">
-        «Да-да, это мы! Время пролетело так быстро, представляете? И вот мы повзрослели и приняли решение, что пора жениться! Приглашаем вас присоединиться к нашему первому семейному празднику – нашей свадьбе! Будем рады, если это событие вы разделите вместе с нами.»
+        Да-да, это мы! Время пролетело так быстро, представляете? И вот мы повзрослели и приняли решение, что пора жениться! Приглашаем вас присоединиться к нашему первому семейному празднику – нашей свадьбе! Будем рады, если это событие вы разделите вместе с нами.
       </div>
       
       <!-- КАЛЕНДАРЬ С ОБВОДКОЙ -->
@@ -661,7 +687,7 @@
 
     <!-- ТАЙМИНГ -->
     <div class="glass-card" id="section-timing">
-      <h2>⏰ Тайминг</h2>
+      <h2>Тайминг</h2>
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-time">15:15</div>
@@ -682,15 +708,25 @@
       </div>
     </div>
 
-    <!-- ДРЕСС-КОД С ЦВЕТОВЫМИ КРУЖКАМИ (4 ШТУКИ) -->
+    <!-- ДРЕСС-КОД -->
     <div class="glass-card" id="section-dresscode">
       <h2>Дресс-код</h2>
       <div class="dresscode-text">
         Мы старались сделать праздник красивым и будем рады, если вы поддержите цветовую гамму нашей свадьбы
       </div>
+      
+      <!-- ЖЕНЩИНЫ -->
+      <div class="dresscode-subtitle">Женщины</div>
       <ul class="dresscode-colors">
         <li></li>
         <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      
+      <!-- МУЖЧИНЫ -->
+      <div class="dresscode-subtitle">Мужчины</div>
+      <ul class="dresscode-colors-men">
         <li></li>
         <li></li>
       </ul>
@@ -704,16 +740,16 @@
           <a href="https://yandex.ru/maps/org/oktyabrskiy/1759042964/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Октябрьский</a>
           <a href="https://yandex.ru/maps/195/ulyanovsk/category/restaurant/184106394/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Ресторан в Ульяновске</a>
           <iframe 
-            src="https://yandex.ru/map-widget/v1/?ll=48.402584%2C54.310752&mode=poi&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1759042964&z=20" 
+            src="https://yandex.ru/map-widget/v1/?ll=48.401913%2C54.310623&mode=poi&poi%5Bpoint%5D=48.402464%2C54.310735&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1759042964&z=17.81" 
             width="100%" 
-            height="400" 
+            height="350" 
             frameborder="0" 
             allowfullscreen="true" 
             style="position:relative; display: block;">
           </iframe>
         </div>
       </div>
-      <div style="margin-top: 1rem; font-size: 0.85rem; text-align: center;">
+      <div style="margin-top: 0.8rem; font-size: 0.8rem; text-align: center;">
         <a href="https://yandex.ru/maps/org/oktyabrskiy/1759042964/" target="_blank" style="color: #8b855a; text-decoration: underline;">🗺️ Открыть ресторан "Октябрьский" на карте →</a>
       </div>
     </div>
@@ -725,17 +761,16 @@
         <div class="button-group">
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3wpl5X2Lu4HjgNmSiEsVHcKJoOw6R0I92Zvvy8wFHpBAmYA/viewform?usp=pp_url" target="_blank" class="btn-modern">📋 Ответьте на пару вопросов →</a>
         </div>
-        <p style="font-size: 0.8rem; margin-top: 1.5rem;">Ваши ответы помогут нам при организации нашего торжества.</p>
+        <p style="font-size: 0.85rem; margin-top: 1rem; font-weight: 600; font-style: italic;">Ваши ответы помогут нам при организации нашего торжества.</p>
       </div>
     </div>
 
     <footer>
-      С любовью, теплом и оттенками хаки ❤️<br>
+      С любовью и теплом ❤️<br>
       Никита и Анастасия • 17.07.2026
     </footer>
   </div>
 </div>
-
 
 <script>
   // Открытие конверта
@@ -815,7 +850,9 @@
         doneMsg.style.textAlign = 'center';
         doneMsg.style.marginTop = '1rem';
         doneMsg.style.fontSize = '1.3rem';
-        doneMsg.style.fontFamily = "'Playfair Display', serif";
+        doneMsg.style.fontFamily = 'Cormorant Garamond', serif;
+        doneMsg.style.fontWeight = '700';
+        doneMsg.style.fontStyle = 'italic';
         doneMsg.style.color = '#a09468';
         doneMsg.innerHTML = '♡ Сегодня наш день! ♡';
         grid.appendChild(doneMsg);
